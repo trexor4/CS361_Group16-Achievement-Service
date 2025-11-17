@@ -53,7 +53,7 @@ GET /achievements is used to recieve a JSON containing locked and unlocked achie
 ```
 
 ## Using this on your project
-while in microservice directory use npm install to install dependencies from package
+while in microservice directory use npm install to install dependencies from package and run node achivements.js
 This function is how you are going to communicate with the achievement service, from here you can call it on different acheivement types that you add.
 place this in your main program.
 ```
