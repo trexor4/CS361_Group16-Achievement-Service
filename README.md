@@ -1,4 +1,4 @@
-## CS361_Group16-Achievement-Service
+## Communication Contract
 
 Repo for Achivement microservice for sprint 2
 
