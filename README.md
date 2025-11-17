@@ -80,7 +80,7 @@ Where `type` is one of:
       - add new counter in state.counters
       - add a new case in applyEvent(type)
       - add a new achievement in the achievements array
-      - place sendAchievement("your new type");
+      - place sendAchievement("your new type") in the desired event on your main program;
      ```
   ### UML
 
