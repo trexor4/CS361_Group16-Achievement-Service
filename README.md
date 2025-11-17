@@ -37,30 +37,20 @@ GET /achievements is used to recieve a JSON containing locked and unlocked achie
 This function is how you are going to communicate with the dashboard, from here you can call it on different acheivement types that you add.
 
 ```
-## CS361_Group16-Achievement-Service
+const achievementHost = "http://localhost:8001";
 
-Repo for Achievement microservice for sprint 2
+async function sendAchievement(type) {
+  const res = await fetch(`${achievementHost}/events`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type })
+  });
 
-## Overview
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status}`);
+  }
 
-The Achievement Service is a microservice that tracks user events (searches, clicks, etc.) and automatically unlocks achievements based on configurable rules. The service maintains a state of achievement progress and provides endpoints for both sending events and retrieving achievement data.
-
----
-
-## Requesting Data (POST /events)
-
-To send an event to the Achievement Service, make a **POST request** to the `/events` endpoint with the event type. This tells the service to process an action and check if any achievements should be unlocked.
-
-**Endpoint:** `POST http://localhost:8001/events`
-
-**Request Headers:**
-- `Content-Type: application/json`
-
-**Request Body:**
-```json
-{
-  "type": "event_type"
-}
+  return res.json();
 ```
 
 Where `event_type` is one of:
