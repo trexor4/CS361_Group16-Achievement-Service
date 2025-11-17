@@ -41,7 +41,7 @@ This function is how you are going to communicate with the dashboard, from here 
 '{ id: 'test1', name: 'achievement test1', check: s => s.counters.searches >= 1 }'
 
 
-'''
+```
 const achivementHost = 'http://localhost:8001';
 
 async function sendAchievement(type) {
@@ -73,4 +73,4 @@ eventButton.onclick = async () => {
       output.textContent = "Error: " + err.message;
     }
   };
-  '''
+```
