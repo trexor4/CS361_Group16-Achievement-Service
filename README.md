@@ -1,5 +1,5 @@
 ## CS361_Group16-Achievement-Service
-***
+
 Repo for Achivement microservice for sprint 2
 
 # Requesting Data 
@@ -31,17 +31,17 @@ GET /achievements is used to recieve a JSON containing locked and unlocked achie
         "clicks": 0
         }
     }
-***
+
 
 ## Using this on your project
 This function is how you are going to communicate with the dashboard, from here you can call it on different acheivement types that you add.
 
 ### Needs finishing
 
-{ id: 'test1', name: 'achievement test1', check: s => s.counters.searches >= 1 }
+'{ id: 'test1', name: 'achievement test1', check: s => s.counters.searches >= 1 }'
 
 
-const achivementHost = 'http://localhost:8001';
+''' const achivementHost = 'http://localhost:8001';
 
 async function sendAchievement(type) {
   const res = await fetch(`${achivementHost}/events`, {
@@ -71,4 +71,4 @@ eventButton.onclick = async () => {
     } catch (err) {
       output.textContent = "Error: " + err.message;
     }
-  };
+  };'''
