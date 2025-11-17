@@ -36,8 +36,6 @@ GET /achievements is used to recieve a JSON containing locked and unlocked achie
 ## Using this on your project
 This function is how you are going to communicate with the dashboard, from here you can call it on different acheivement types that you add.
 
-### Needs finishing
-
 ```
 ## CS361_Group16-Achievement-Service
 
@@ -50,8 +48,6 @@ The Achievement Service is a microservice that tracks user events (searches, cli
 ---
 
 ## Requesting Data (POST /events)
-
-### How to Programmatically Request Data
 
 To send an event to the Achievement Service, make a **POST request** to the `/events` endpoint with the event type. This tells the service to process an action and check if any achievements should be unlocked.
 
@@ -70,8 +66,7 @@ To send an event to the Achievement Service, make a **POST request** to the `/ev
 Where `event_type` is one of:
 - `"search"` - Record a search event
 - `"click"` - Record a click event
-
-### Example usage
+- note that you can go into the acheivement.js code and add your own events in the same format and call them 
 
 ### UML
 
