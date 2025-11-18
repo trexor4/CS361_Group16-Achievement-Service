@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 // tracking/storing everything, could be upgraded to db in future. unlocked stores unlocked acheivements
+// when adding new events to track, add countere here.
 let state = {
   counters: {
     searches: 0,
@@ -18,7 +19,7 @@ let state = {
   unlocked: []
 };
 
-// Achievement rules
+// Achievement rules - when adding new events add the acheviement and condition here.
 const achievements = [
   { id: 'test1', name: 'achievement test1', check: s => s.counters.searches >= 1 }
 ];
@@ -51,7 +52,7 @@ app.post('/events', (req, res) => {
 // Handle route errors
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 
-// Update counters
+// Update counters- when adding new event add it here as well
 function applyEvent(type) {
   if (type === 'search') {
     state.counters.searches++;
